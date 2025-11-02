@@ -1,0 +1,29 @@
+{
+  "name": "movies-search",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "etl:clean": "node etl/clean.js",
+    "etl:generate-embeddings": "node etl/generate_embeddings.js",
+    "etl:upload": "node etl/upload_docs.js",
+    "build:frontend": "cd frontend && pnpm build",
+    "build:api": "cd api && pnpm build",
+    "dev:swa": "pnpm build:frontend && pnpm build:api && swa start frontend/dist --api-location api"
+  },
+  "keywords": [],
+  "author": "Keijo Prunt",
+  "license": "ISC",
+  "packageManager": "pnpm@10.19.0",
+  "devDependencies": {
+    "fast-csv": "^5.0.5"
+  },
+  "dependencies": {
+    "@azure/cosmos": "^4.7.0",
+    "@xenova/transformers": "^2.17.2",
+    "dotenv": "^17.2.3",
+    "p-queue": "^9.0.0",
+    "sharp": "^0.34.4"
+  }
+}
