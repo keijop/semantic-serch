@@ -3,9 +3,12 @@
     "moduleResolution": "node",
     "module": "ES2020",
     "target": "es2020",
-    "outDir": "./",
-    "rootDir": "./src",
+    "outDir": "./",           // Output JS directly to the root of api/
+    "rootDir": "./src",       // Set src as the root directory for input files
     "sourceMap": true,
     "strict": false
-  }
+  },
+  "include": [
+    "src/**/*"                // Ensure only files inside src/ are included
+  ]
 }
